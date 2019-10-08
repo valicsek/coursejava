@@ -1,4 +1,4 @@
 package com.sportbetting.domain;
 
-public enum BetType {
+public enum EBetType {
 }

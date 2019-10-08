@@ -1,4 +1,7 @@
-package com.app;
+package com.sportbetting;
+
+import com.sportbetting.service.SportsBettingService;
+import com.sportbetting.view.View;
 
 public class Main {
 

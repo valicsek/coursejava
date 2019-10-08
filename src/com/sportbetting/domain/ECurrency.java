@@ -1,4 +1,4 @@
 package com.sportbetting.domain;
 
-public enum Currency {
+public enum ECurrency {
 }

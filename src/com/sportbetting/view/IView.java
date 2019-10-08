@@ -1,4 +1,4 @@
-package com.app;
+package com.sportbetting.view;
 
 import com.sportbetting.domain.Player;
 import com.sportbetting.domain.SportEvent;
@@ -7,7 +7,7 @@ import com.sportbetting.domain.Wager;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface View {
+public interface IView {
     Player readPlayerData();
     void printWelcomeMessage(Player player);
     void printBalance(Player player);

@@ -1,18 +1,23 @@
-package com.app;
+package com.sportbetting;
+
+import com.sportbetting.service.ISportsBettingService;
+import com.sportbetting.view.IView;
 
 import java.util.Scanner;
 
 public class App {
-    public App(SportsBettingService sportsBettingService, View view) {
-    }
+
+    public App(ISportsBettingService sportsBettingService, IView view) { }
 
     public void play() {
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
 
         System.out.println("What is your name?");
         String name = scanner.nextLine();
+
         System.out.println("How much money do you have (more than 0)??");
         String money = scanner.nextLine();
+
         System.out.println("What is your currency? (HUF, EUR or USD)");
         String currency = scanner.nextLine();
 
@@ -20,15 +25,11 @@ public class App {
         System.out.println("Your balance is " + money + " " + currency);
     }
 
-    private void createPlayer() {
-    }
+    private void createPlayer() { }
 
-    private void doBetting() {
-    }
+    private void doBetting() { }
 
-    private void calculateResults() {
-    }
+    private void calculateResults() { }
 
-    private void printResults() {
-    }
+    private void printResults() { }
 }

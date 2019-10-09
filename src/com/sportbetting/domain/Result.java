@@ -3,13 +3,23 @@ package com.sportbetting.domain;
 import java.util.List;
 
 public class Result {
-    public List<Outcome> getOutcomes() {
-        return outcomes;
-    }
+    private List<Outcome> outcomes;
 
-    public void setOutcomes(List<Outcome> outcomes) {
+    public Result(List<Outcome> outcomes) {
         this.outcomes = outcomes;
     }
 
-    List<Outcome> outcomes;
+    public static class Builder {
+        private List<Outcome> outcomes;
+
+        public Builder() { }
+
+        public Result build() {
+            return new Result(outcomes);
+        }
+
+        public void setOutcomes(List<Outcome> outcomes) {
+            this.outcomes = outcomes;
+        }
+    }
 }

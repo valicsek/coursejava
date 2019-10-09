@@ -18,9 +18,7 @@ public class App {
         this.sportBettingService = sportsBettingService;
     }
 
-    public void play() {
-        this.createPlayer();
-    }
+    public void play() { this.createPlayer(); }
 
     private void createPlayer() {
         this.player = view.readPlayerData();

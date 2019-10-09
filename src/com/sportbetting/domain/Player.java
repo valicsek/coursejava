@@ -33,8 +33,7 @@ public class Player {
         private LocalDate birth;
         private ECurrency currency;
 
-        public Builder() {
-        }
+        public Builder() { }
 
         public Player build() {
             return new Player(name, accountNumber, balance, birth, currency);

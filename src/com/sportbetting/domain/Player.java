@@ -11,13 +11,19 @@ public class Player {
     private LocalDate birth;
     private ECurrency currency;
 
+    public void setName(String name) { this.name = name; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+    public void setBalance(BigDecimal balance) { this.balance = balance; }
+    public void setBirth(LocalDate birth) { this.birth = birth; }
+    public void setCurrency(ECurrency currency) { this.currency = currency; }
+
     public String getName() { return name; }
     public String getAccountNumber() { return accountNumber; }
     public BigDecimal getBalance() { return balance; }
     public LocalDate getBirth() { return birth; }
     public ECurrency getCurrency() { return currency; }
 
-    private Player(String name, String accountNumber, BigDecimal balance, LocalDate birth, ECurrency currency) {
+    public Player(String name, String accountNumber, BigDecimal balance, LocalDate birth, ECurrency currency) {
         this.name = name;
         this.accountNumber = accountNumber;
         this.balance = balance;

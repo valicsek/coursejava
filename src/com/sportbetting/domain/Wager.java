@@ -62,6 +62,10 @@ public class Wager {
 
         public Builder() { }
 
+        public Wager build() {
+            return new Wager(player, outcomeOdd, amount, currency, timestampCreated, processed, win);
+        }
+
         public Builder setPlayer(Player player) {
             this.player = player;
             return this;

@@ -1,22 +1,23 @@
 package com.sportbetting.domain;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
 public class SportEvent {
     private String title;
-    private Date startDate;
-    private Date endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private List<Bet> bets;
     private List<Result> results;
 
     public String getTitle() { return title; }
-    public Date getStartDate() { return startDate; }
-    public Date getEndDate() { return endDate; }
+    public LocalDateTime getStartDate() { return startDate; }
+    public LocalDateTime getEndDate() { return endDate; }
     public List<Bet> getBets() { return bets; }
     public List<Result> getResults() { return results; }
 
-    public SportEvent(String title, Date startDate, Date endDate, List<Bet> bets, List<Result> results) {
+    public SportEvent(String title, LocalDateTime startDate, LocalDateTime endDate, List<Bet> bets, List<Result> results) {
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -26,8 +27,8 @@ public class SportEvent {
 
     public static class Builder {
         private String title;
-        private Date startDate;
-        private Date endDate;
+        private LocalDateTime startDate;
+        private LocalDateTime endDate;
         private List<Bet> bets;
         private List<Result> results;
 
@@ -42,12 +43,12 @@ public class SportEvent {
             return new SportEvent(title,startDate,endDate,bets,results);
         }
 
-        public Builder setStartDate(Date startDate) {
+        public Builder setStartDate(LocalDateTime startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setEndDate(Date endDate) {
+        public Builder setEndDate(LocalDateTime endDate) {
             this.endDate = endDate;
             return this;
         }

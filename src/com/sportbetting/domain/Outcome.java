@@ -5,31 +5,34 @@ import java.util.List;
 public class Outcome {
 
     private String description;
-    private List<Outcome> outcomes;
+    private List<OutcomeOdd> outcomeOdds;
     private Bet bet;
 
     public String getDescription() {
         return description;
     }
-    public List<Outcome> getOutcomes() {
-        return outcomes;
+    public List<OutcomeOdd> getOutcomeOdds() {
+        return outcomeOdds;
     }
     public Bet getBet() {
         return bet;
     }
 
-    public Outcome(String description, List<Outcome> outcomes, Bet bet) {
+    public Outcome(String description, List<OutcomeOdd> outcomeOdds, Bet bet) {
         this.description = description;
-        this.outcomes = outcomes;
+        this.outcomeOdds = outcomeOdds;
         this.bet = bet;
     }
 
     public static class Builder {
 
         private String description;
-        private List<Outcome> outcomes;
+        private List<OutcomeOdd> outcomeOdds;
         private Bet bet;
 
+        public Outcome build() {
+            return new Outcome(description, outcomeOdds, bet);
+        }
         public Builder() { }
 
         public Builder setDescription(String description) {
@@ -37,8 +40,8 @@ public class Outcome {
             return this;
         }
 
-        public Builder setOutcomes(List<Outcome> outcomes) {
-            this.outcomes = outcomes;
+        public Builder setOutcomesOdds(List<OutcomeOdd> outcomeOdds) {
+            this.outcomeOdds = outcomeOdds;
             return this;
         }
 

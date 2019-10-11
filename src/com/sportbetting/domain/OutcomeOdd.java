@@ -39,24 +39,30 @@ public class OutcomeOdd {
             return new OutcomeOdd(outcome, value, validFrom, validUntil, currency);
         }
 
-        public void setOutcome(Outcome outcome) {
+        public Builder setOutcome(Outcome outcome) {
             this.outcome = outcome;
+            return this;
         }
 
-        public void setValue(BigDecimal value) {
+        public Builder setValue(BigDecimal value) {
             this.value = value;
+            return this;
         }
 
-        public void setValidFrom(LocalDateTime validFrom) {
+        public Builder setValidFrom(LocalDateTime validFrom) {
             this.validFrom = validFrom;
+            return this;
         }
 
-        public void setValidUntil(LocalDateTime validUntil) {
+        public Builder setValidUntil(LocalDateTime validUntil) {
             this.validUntil = validUntil;
+            return this;
+
         }
 
-        public void setCurrency(ECurrency currency) {
+        public Builder setCurrency(ECurrency currency) {
             this.currency = currency;
+            return this;
         }
     }
 

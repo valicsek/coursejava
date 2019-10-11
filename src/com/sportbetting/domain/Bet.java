@@ -38,6 +38,10 @@ public class Bet {
 
         public Builder() { }
 
+        public Bet build() {
+            return new Bet(event, description, betType, outcomes);
+        }
+
         public Builder setEvent(SportEvent event) {
             this.event = event;
             return this;
